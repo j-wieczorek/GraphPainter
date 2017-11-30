@@ -149,6 +149,8 @@ public class CopsAndRobbers<T extends Comparable<T>> extends JFrame implements M
 			if (decontaminatedVertices.contains(fugitivePosition))
 			{
 				displayStatus("You won!");
+				BtnAdd.setEnabled(false);
+				BtnRemove.setEnabled(false);
 			}
 			ConnectedComponents<T> connectedComponents = new ConnectedComponents<T>(G, GraphPanel.cops);
 			Set<Set<T>> connectedVerticesSets = connectedComponents.getAsSets();
@@ -159,6 +161,8 @@ public class CopsAndRobbers<T extends Comparable<T>> extends JFrame implements M
 				if (fugitiveConnectedComponent.contains(v))
 				{
 					displayStatus("You lost!");
+					BtnAdd.setEnabled(false);
+					BtnRemove.setEnabled(false);
 				}
 			}
 		}
@@ -299,8 +303,7 @@ public class CopsAndRobbers<T extends Comparable<T>> extends JFrame implements M
 						.addComponent(GraphPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 		);
 
-		pack();
-	}// </editor-fold>
+	}
 
 	/**
 	 * Handling adding a cop action. Method comunicates with GraphPanel, which is responsible for drawing the graph and
@@ -353,6 +356,8 @@ public class CopsAndRobbers<T extends Comparable<T>> extends JFrame implements M
 		copsUsed = 0;
 		CopsUsed.setText("0");
 		LblGameStatus.setText("");
+		BtnAdd.setEnabled(true);
+		BtnRemove.setEnabled(true);
 		this.repaint(0);
 	}
 

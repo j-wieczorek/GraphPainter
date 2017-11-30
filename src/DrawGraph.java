@@ -145,6 +145,7 @@ class SurfaceGraph<T extends Comparable<T>> extends JPanel
 		circles = new HashMap<>();
 		cops = new HashSet<>();
 		fugitiveConnectedComponent = new HashSet<>();
+		newCop = null;
 		HashMap<T, Point2DInt> map = new HashMap<>();
 		map = G.getVerticesCoordinates();
 		for (Map.Entry<T, Point2DInt> entry : map.entrySet())
@@ -175,6 +176,16 @@ class SurfaceGraph<T extends Comparable<T>> extends JPanel
 		return removingCop;
 	}
 
+	public void clean()
+	{
+		cops.clear();
+		fugitiveConnectedComponent.clear();
+		newCop = null;
+	}
+	public void refresh()
+	{
+		repaint(0);
+	}
 	private void doDrawing(Graphics g)
 	{
 		Graphics2D g2d = (Graphics2D) g.create();

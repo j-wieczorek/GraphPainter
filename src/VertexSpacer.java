@@ -170,7 +170,6 @@ public class VertexSpacer<T extends Comparable<T>>
 			calculateRepulsiveForces();
 			calculateAttractiveForces();
 			limitDisplacement();
-			System.out.println("i = " + i);
 		}
 		saveCoordinates();
 		return verticesCoordinates;

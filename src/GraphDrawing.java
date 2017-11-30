@@ -5,7 +5,7 @@ public class GraphDrawing
 	public static void main(String[] args)
 	{
 		Graph g = GraphFactory.emptyGraph();
-		for (int v = 1; v<=13; v++)
+		for (int v = 1; v<=7; v++)
 		{
 			g.addVertex(v);
 		}
@@ -21,24 +21,12 @@ public class GraphDrawing
 
 		g.addEdge(3,7);
 
-		g.addEdge(7,8);
-		g.addEdge(7,9);
-		g.addEdge(8,9);
 
-		g.addEdge(8,10);
-
-		g.addEdge(10,11);
-		g.addEdge(10,12);
-		g.addEdge(11,12);
-
-		g.addEdge(9,13);
-
-		g.addEdge(13,14);
-		g.addEdge(13,15);
-		g.addEdge(14,15);
 
 		DrawGraph G = new DrawGraph(g);
+		System.out.println(G);
 		G.draw();
+
 	}
 
 }

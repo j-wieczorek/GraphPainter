@@ -1,8 +1,7 @@
 # GraphPainter
 Visualization utility for Jdrasil library enabling user to display processed graphs 
 ## About
-GraphPainter is plugin for Jdrasil library (developed by Max Bannach, Sebastian Berndt, and Thorsten Ehlers, 
-https://github.com/maxbannach/Jdrasil). Having the graph as an object of Jdrasil's class Graph drawing this graph requires only 2 lines of code:
+GraphPainter is a plugin for [Jdrasil](https://github.com/maxbannach/Jdrasil) (Max Bannach, Sebastian Berndt, and Thorsten Ehlers). Having the graph as an object of Jdrasil's class Graph drawing this graph requires only 2 lines of code:
 
 ```
 DrawGraph G = new DrawGraph(g);
